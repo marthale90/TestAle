@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_title_header">22sp</dimen>
+    <dimen name="height_header">57dp</dimen>
+    <dimen name="favorite_item_height">174dp</dimen>
+    <dimen name="favorite_item_width">174dp</dimen>
+</resources>

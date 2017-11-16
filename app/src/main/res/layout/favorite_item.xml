@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/favorite_item_width"
+    android:layout_height="@dimen/favorite_item_height"
+    android:layout_margin="8dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/test" />
+
+    <ImageView
+        android:id="@+id/plusLevelProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/conditionProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/plusLevelProduct" />
+
+    <ImageView
+        android:id="@+id/importProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/conditionProduct" />
+
+    <ImageView
+        android:id="@+id/freeShippingProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/importProduct" />
+</RelativeLayout>
