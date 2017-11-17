@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/imagesContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/border_radius_collection">
+
+        <ImageView
+            android:id="@+id/product1"
+            android:layout_width="@dimen/collection_img_p1"
+            android:layout_height="@dimen/collection_img_p1"
+            android:layout_margin="@dimen/margin_collection" />
+
+        <ImageView
+            android:id="@+id/product2"
+            android:layout_width="@dimen/collection_img_p2_p3"
+            android:layout_height="@dimen/collection_img_p2_p3"
+            android:layout_margin="@dimen/margin_collection"
+            android:layout_toEndOf="@+id/product1" />
+
+        <ImageView
+            android:id="@+id/product3"
+            android:layout_width="@dimen/collection_img_p2_p3"
+            android:layout_height="@dimen/collection_img_p2_p3"
+            android:layout_below="@+id/product2"
+            android:layout_margin="@dimen/margin_collection"
+            android:layout_toEndOf="@+id/product1" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/nameCollection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagesContent"
+        android:layout_marginStart="@dimen/lef_name_n_count_collection"
+        android:layout_marginTop="@dimen/top_name_collection"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_name_collection" />
+
+    <TextView
+        android:id="@+id/countCollection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameCollection"
+        android:layout_marginStart="@dimen/lef_name_n_count_collection"
+        android:textColor="@color/pinkish_grey"
+        android:textSize="@dimen/size_name_collection" />
+
+</RelativeLayout>

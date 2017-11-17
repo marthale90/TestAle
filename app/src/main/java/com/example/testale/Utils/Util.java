@@ -22,7 +22,15 @@ import static com.example.testale.Commons.Constants.LINIO_PLUS_LEVEL_2;
  */
 
 public class Util {
-
+    /**
+     * Reglas para mostrar los badge.
+     *
+     * @param linioPlusLevel
+     * @param conditionType
+     * @param isImported
+     * @param isFreeShipping
+     * @return
+     */
     public static ProductAttributes getAtributesResProduct(final int linioPlusLevel, final String conditionType, final boolean isImported, final boolean isFreeShipping) {
         ProductAttributes productAttributes = new ProductAttributes();
 
@@ -63,24 +71,6 @@ public class Util {
             flag = true;
         }
         return flag;
-    }
-
-    public static Bitmap getImageByUrl(final String urlString, final Context context) {
-        Bitmap bitmap = null;
-        HttpURLConnection conn = null;
-        try {
-            URL url = new URL(urlString);
-            conn = (HttpURLConnection) url.openConnection();
-            conn.connect();
-            bitmap = BitmapFactory.decodeStream(conn.getInputStream());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        if (bitmap == null)
-            bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.default_image);
-
-        return bitmap;
     }
 
     public static String loadJSONFromAssets(final Context context, final String nameFile) {

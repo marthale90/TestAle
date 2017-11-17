@@ -11,21 +11,51 @@
         android:id="@+id/header"
         layout="@layout/header" />
 
-    <RelativeLayout
-        android:id="@+id/contentColections"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/header">
 
-    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/favorites"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/contentColections"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:scrollbars="vertical" />
+            <RelativeLayout
+                android:id="@+id/contentColl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
 
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/collections"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/white"
+                    android:scrollbars="vertical" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/titleCountFav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contentColl"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/bottom_title_count_fav"
+                android:layout_marginTop="@dimen/top_title_count_fav"
+                android:textSize="@dimen/size_title_count_fav"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/favorites"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/titleCountFav"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp" />
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

@@ -15,8 +15,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import static java.security.AccessController.getContext;
-
 /**
  * Created by Martha Toledano on 16/11/2017.
  */
@@ -25,7 +23,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.View
     private List<DataProduct> dataProducts;
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         ImageView productImage;
         ImageView plusLevelProduct;
         ImageView conditionProduct;
@@ -33,7 +31,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.View
         ImageView freeShippingProduct;
         View layout;
 
-        public ViewHolder(View v) {
+        ViewHolder(View v) {
             super(v);
             layout = v;
             productImage = v.findViewById(R.id.productImage);
@@ -62,7 +60,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.View
     public FavoritesAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View v = inflater.inflate(R.layout.favorite_item, parent, false);
-        // set the view's size, margins, paddings and layout parameters
+
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
@@ -72,7 +70,6 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.View
 
         final DataProduct data = dataProducts.get(position);
 
-        //      holder.productImage.setImageBitmap(Util.getImageByUrl(data.getImage(), holder.layout.getContext()));
         Picasso.with(holder.layout.getContext()).load(data.getImage()).fit().into(holder.productImage);
 
         ProductAttributes productAttributes = Util.getAtributesResProduct(data.getLinioPlusLevel(), data.getConditionType(), data.isImported(), data.isFreeShipping());

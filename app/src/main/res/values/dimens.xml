@@ -4,4 +4,13 @@
     <dimen name="height_header">57dp</dimen>
     <dimen name="favorite_item_height">174dp</dimen>
     <dimen name="favorite_item_width">174dp</dimen>
+    <dimen name="top_title_count_fav">34dp</dimen>
+    <dimen name="bottom_title_count_fav">24dp</dimen>
+    <dimen name="size_title_count_fav">19sp</dimen>
+    <dimen name="collection_img_p1">100dp</dimen>
+    <dimen name="collection_img_p2_p3">46dp</dimen>
+    <dimen name="margin_collection">4dp</dimen>
+    <dimen name="size_name_collection">14sp</dimen>
+    <dimen name="top_name_collection">12dp</dimen>
+    <dimen name="lef_name_n_count_collection">18dp</dimen>
 </resources>
