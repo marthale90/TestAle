@@ -1,41 +1,35 @@
 package com.example.testale.Server.Response;
 
-public class Owner{
-	private String name;
-	private String email;
-	private String linioId;
+/**
+ * Created by Martha Toledano on 16/11/2017.
+ */
 
-	public void setName(String name){
-		this.name = name;
-	}
+public class Owner {
+    private String name;
+    private String email;
+    private String linioId;
 
-	public String getName(){
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setEmail(String email){
-		this.email = email;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getEmail(){
-		return email;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public void setLinioId(String linioId){
-		this.linioId = linioId;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public String getLinioId(){
-		return linioId;
-	}
+    public String getLinioId() {
+        return linioId;
+    }
 
-	@Override
- 	public String toString(){
-		return 
-			"Owner{" + 
-			"name = '" + name + '\'' + 
-			",email = '" + email + '\'' + 
-			",linioId = '" + linioId + '\'' + 
-			"}";
-		}
+    public void setLinioId(String linioId) {
+        this.linioId = linioId;
+    }
 }

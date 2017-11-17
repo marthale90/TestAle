@@ -3,11 +3,12 @@ package com.example.testale.Utils;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
 
 import com.example.testale.Commons.ProductAttributes;
 import com.example.testale.R;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -81,4 +82,21 @@ public class Util {
 
         return bitmap;
     }
+
+    public static String loadJSONFromAssets(final Context context, final String nameFile) {
+        String json;
+        try {
+            InputStream is = context.getAssets().open(nameFile);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
+
 }
